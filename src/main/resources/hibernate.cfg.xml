@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+
+		<!-- Assume test is the database name -->
+
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://localhost:5432/mapping
+		</property>
+
+		<property name="hibernate.connection.username">
+			axelor
+		</property>
+
+		<property name="hibernate.connection.password">
+			axelor
+		</property>
+
+
+		<property name="hbm2ddl.auto">update</property>
+		
+		<mapping class="mapping.Per" />
+		<mapping class="mapping.Contact" /> 
+		
+		
+		<!--  <mapping class="Demo1.Human" />
+		<mapping class="Demo1.Laptop" /> 
+		 -->
+		<!-- <mapping class="Demo1.laptop" />
+		
+		
+		<mapping class="Demo1.Stud" />
+		<mapping class="Demo1.student" />
+		<mapping class="Demo1.laptop" />
+		<mapping class="Demo1.Studhql" />  
+		
+	 	<mapping class="Demo1.person"></mapping>
+		<mapping class="Demo1.department"></mapping>
+		
+		<mapping class="Demo1.professor"></mapping>
+		<mapping class="Demo1.parkspace"></mapping> 
+		
+		 -->
+      
+    <!--   <mapping class="Demo1.person"></mapping>
+		<mapping class="Demo1.department"></mapping> -->
+	</session-factory>
+</hibernate-configuration>
